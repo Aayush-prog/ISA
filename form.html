@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        overflow: hidden;
+    }
+    button{
+        background-color: green;
+    }
+    form{
+        width: 500px;
+        height:fit-content;
+        padding: 1%;
+        line-height: 23px;
+        margin: 0%;
+        margin-top: 10px;
+        border: solid black;
+        transform: translateX(500px);
+    }
+    input[type=text],textarea,button,select{
+        width: 490px;
+    }
+    button{
+        height: 30px;
+        font-weight: bold;
+    }
+    h2{
+        margin-top: 10px;
+    }
+  </style>
+  <body>
+    <center><h2>Herald College</h2></center>
+    <form>
+      <div class="inputbox">
+        <span>Full Name</span><br />
+        <input
+          type="text"
+          placeholder="Enter your name"
+          required="required"
+        /><br />
+        <span>Email</span><br />
+        <input
+          type="text"
+          placeholder="Enter your email"
+          required="required"
+        /><br />
+        <span>Age</span><br />
+        <input
+          type="text"
+          placeholder="Enter your age"
+          required="required"
+        /><br />
+        <label for="options">Which opton best describes you?</label><br />
+        <select id="options">
+          <option value="s">Student</option>
+          <option value="t">Teacher</option>
+          <option value="n">Noob</option>
+        </select><br>
+        <span>Would you recommend Herald College of Kathmandu to a friend?</span><br>
+        <input type="checkbox" id="yes"/>
+        <label for="yes"> Yes</label><br />
+        <input type="checkbox" id="no"/>
+        <label for="no"> No</label><br />
+        <input type="checkbox" id="maybe"/>
+        <label for="maybe"> Maybe</label><br />
+        <span>Languages and Frameworks known</span><br>
+        <input type="checkbox" id="c"/>
+        <label for="c"> C</label><br />
+        <input type="checkbox" id="c++"/>
+        <label for="c++"> C++</label><br />
+        <input type="checkbox" id="c#"/>
+        <label for="c#"> C#</label><br />
+        <input type="checkbox" id="j"/>
+        <label for="j"> Java</label><br />
+        <input type="checkbox" id="p"/>
+        <label for="p"> Python</label><br />
+        <input type="checkbox" id="js"/>
+        <label for="js"> JavaScript</label><br />
+        <input type="checkbox" id="r"/>
+        <label for="r"> React</label><br />
+        <input type="checkbox" id="a"/>
+        <label for="a"> Angular</label><br />
+        <input type="checkbox" id="d"/>
+        <label for="d"> Django</label><br />
+        <input type="checkbox" id="s"/>
+        <label for="s"> Spring</label><br />
+        <span>Any comments or suggestions</span><br>
+        <textarea></textarea><br>
+        <button>Submit</button>
+    </form>
+  </body>
+</html>
