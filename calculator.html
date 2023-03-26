@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+button {
+font-size: 200%;
+width: 40px;
+}
+
+input {
+font-size: 14px;
+height: 40px;
+text-align: right;
+}
+
+</style>
+</head>
+
+<body>
+
+<table>
+<tr>
+  <td colspan="4"><input id="display" name="display" disabled></input></td>
+</tr>
+
+<tr>
+  <td><button id="button1" value="1" onclick="display('1')">1</button></td>
+  <td><button id="button2" value="2"onclick="display('2')">2</button></td>
+  <td><button id="button3" value="3"onclick="display('3')">3</button></td>
+  <td><button id="addButton"onclick="display('+')">+</button></td>
+</tr>
+<tr>
+  <td><button id="button4" value="4"onclick="display('4')">4</button></td>
+  <td><button id="button5" value="5"onclick="display('5')">5</button></td>
+  <td><button id="button6" value="6"onclick="display('6')">6</button></td>
+  <td><button id="subtractButton"onclick="display('-')">-</button></td>
+</tr>
+<tr>
+  <td><button id="button7" value="7"onclick="display('7')">7</button></td>
+  <td><button id="button8" value="8"onclick="display('8')">8</button></td>
+  <td><button id="button9" value="9"onclick="display('9')">9</button></td>
+  <td><button id="multiplyButton"onclick="display('*')">*</button></td>
+</tr>
+<tr>
+  <td><button id="clearButton"onclick="clearScreen()">C</button></td>
+  <td><button id="button0" value="0"onclick="display('0')">0</button></td>
+  <td><button id="equalsButton"onclick="answer()">=</button></td>
+  <td><button id="divideButton"onclick="display('/')">&#247;</button></td>
+</tr>
+
+
+
+</table>
+
+<span id='output'><!-- Use this span for writing debug messages or anything else you think will help! --></span>
+
+<script src="calculator.js"></script>
+
+
+</body>
+
+
+
+</html>
