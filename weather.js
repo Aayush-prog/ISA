@@ -1,4 +1,4 @@
-const apiKey = 'e3ad9685b27061fdb70bdd86c8780ffd';
+const apiKey = '5f03c07456880febc706536f866cd8fd';
 
 function getWeatherByCityName(cityName) {
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`;
@@ -35,10 +35,13 @@ function getWeatherByCityName(cityName) {
 }
 
 function searchWeather() {
-  const input = document.getElementById("search-input").value.trim();
-  if (input) {
-    getWeatherByCityName(input);
-  } else {
+  const input = document.getElementById("city").value;
+  if (input=='') {
     alert("Please enter a city name.");
-  }
+  } 
+  getWeatherByCityName(input);
+   
+
 }
+  getWeatherByCityName('Pokhara');
+
