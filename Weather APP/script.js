@@ -1,4 +1,4 @@
-const apiKey = '5f03c07456880febc706536f866cd8fd';
+
 
 async function getWeatherByCityName(city) {
     const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid=5f03c07456880febc706536f866cd8fd");
@@ -11,7 +11,7 @@ async function getWeatherByCityName(city) {
     const temp = data.main.temp;
     const humidity = data.main.humidity;
     const windSpeed = data.wind.speed;
-    const chanceOfRain = data.rain?.["1h"] || 0;
+    const pressure = data.main.pressure;
     const timestamp = data.dt;
     const date = new Date(timestamp * 1000);
     const formattedTime = date.toLocaleTimeString();
@@ -23,14 +23,14 @@ async function getWeatherByCityName(city) {
     document.getElementById("temp").textContent = `${temp} °C`;
     document.getElementById("humidity").textContent = `Humidity: ${humidity}%`;
     document.getElementById("wind").textContent = `Wind: ${windSpeed} m/s`;
-    document.getElementById("rain").textContent = `Chance of Rain: ${chanceOfRain} mm/h`;
+    document.getElementById("pressure").textContent = `Pressure: ${pressure} Pa`;
     document.getElementById("time").textContent = `Updated at ${formattedTime}`;
 }
-function searchWeather() {
-  const input = document.getElementById("city").value;
-  
-    getWeatherByCityName(input);
-  }
+const input = document.getElementById("city");
+function caller(){
+    getWeatherByCityName(input.value);
+}
+if (!input.value) {
+        getWeatherByCityName('Angus');
+    }
 
-
-getWeatherByCityName('Angus');
